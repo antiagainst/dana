@@ -1,5 +1,6 @@
 /configs
 node_modules
+package-lock.json
 unused
 *.log
 www/public/dailyReports
