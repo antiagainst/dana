@@ -1082,7 +1082,9 @@ const session = require("express-session");
 const sessionMiddleware = session({
   secret: global.config.sessionSecret,
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: false,
+  cookie: { secure: global.config.secureCookie }
+
 });
 app.use(sessionMiddleware);
 
