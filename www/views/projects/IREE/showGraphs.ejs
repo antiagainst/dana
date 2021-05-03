@@ -45,7 +45,7 @@
       desc: ''
     }
   ];
-  let getSerieIdFn = (modelName, targetId, phone) => 'MobileBERT whole-inference @ ' + phone.name + ' (' + phone.targets[targetId.id] + ')';
+  let getSerieIdFn = (modelName, targetId, phone) => modelName + ' whole-inference @ ' + phone.name + ' (' + phone.targets[targetId.id] + ')';
   $(document).ready(function () {
     tables.MobileBERT = {
       target: 'MobileBERT',
@@ -68,7 +68,7 @@
         name: 'MobileNetv3 Status',
         subtitle: 'on mobile CPU/GPU'
       },
-      getId: function getIdBuild(row, serie) { return getSerieIdFn('MobileNetv3', row, serie); },
+      getId: function getIdBuild(row, serie) { return getSerieIdFn('MobileNet-v3', row, serie); },
       series: tableRows,
       rows: tableColumns,
       widthSerie: 10,
@@ -83,7 +83,7 @@
         name: 'MobileNetv2 Status',
         subtitle: 'on mobile CPU/GPU'
       },
-      getId: function getIdBuild(row, serie) { return getSerieIdFn('MobileNetv2', row, serie); },
+      getId: function getIdBuild(row, serie) { return getSerieIdFn('MobileNet-v2', row, serie); },
       series: tableRows,
       rows: tableColumns,
       widthSerie: 10,
