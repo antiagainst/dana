@@ -1449,9 +1449,9 @@ app.post('/admin/addProject',
       fs.mkdirSync(cwd + '/configs/db/' + projectId);
     }
     global.projects[projectId].series =
-      new ModuleFiles(cwd + '/configs/db/' + projectId + '/series', 10);
+      new ModuleFiles(cwd + '/configs/db/' + projectId + '/series', 200);
     global.projects[projectId].comments =
-      new ModuleFiles(cwd + '/configs/db/' + projectId + '/comments', 10);
+      new ModuleFiles(cwd + '/configs/db/' + projectId + '/comments', 200);
     global.projects[projectId].infos =
       new ModuleFiles(cwd + '/configs/db/' + projectId + '/infos', 200);
 
